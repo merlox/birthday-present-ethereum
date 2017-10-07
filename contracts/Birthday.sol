@@ -2,9 +2,11 @@ pragma solidity 0.4.15;
 
 contract Birthday {
    struct User {
-      uint256 amount,
-      uint256 date
+      uint256 amount;
+      uint256 date;
    }
+
+   mapping(address => User) public balances;
 
    /// @notice Main function to set a time to receive the ether
    /// @param _date When is your next birthday. Must be less than 1 year
